@@ -41,11 +41,13 @@ const SectionImage = styled.img`
 `;
 
 const SectionHeading = styled.h2`
+  color: #EEE5FF;
   font-size: 30px;
   margin-bottom: 20px;
 `;
 
 const SectionParagraph = styled.p`
+  color: #EEE5FFBD;
   font-size: 18px;
   margin-bottom: 20px;
 `;

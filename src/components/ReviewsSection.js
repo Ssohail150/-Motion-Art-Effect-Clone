@@ -7,6 +7,7 @@ const ReviewsContainer = styled.section`
 `;
 
 const Heading = styled.h2`
+  color: #EEE5FF;
   text-align: center;
   font-size: 22px;
   margin-bottom: 40px;
@@ -20,29 +21,42 @@ const ReviewsGrid = styled.div`
 `;
 
 const ReviewCard = styled.div`
+  margin-left: 100px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
   text-align: left;
-  max-width: 300px;
+  max-width: 600px;  // Increase max-width to fit content properly
   flex: 1;
 `;
 
 const Logo = styled.img`
   height: auto;
-  margin-bottom: 10px;
+  margin-right: 20px;
+  max-width: 100px;
+  width: 100px;  // Ensure images don't exceed the designated width
+`;
+
+const ReviewDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
 `;
 
 const Stars = styled.img`
   height: auto;
-  align-self: flex-end;
+  margin-top: 25px;
   margin-bottom: 10px;
+  max-width: 150px;
+  width: 150px;  // Ensure stars image fits within the designated width
+  align-self: flex-start;
 `;
 
 const ReviewParagraph = styled.p`
   font-size: 14px;
+  color: #EEE5FFBD;
+  margin: 0;
 `;
 
 const ReviewsSection = () => {
@@ -71,8 +85,10 @@ const ReviewsSection = () => {
         {reviews.map((review, index) => (
           <ReviewCard key={index}>
             <Logo src={review.logo} alt="Logo" />
-            <Stars src={review.stars} alt="Star Rating" />
-            <ReviewParagraph>{review.text}</ReviewParagraph>
+            <ReviewDetails>
+              <Stars src={review.stars} alt="Star Rating" />
+              <ReviewParagraph>{review.text}</ReviewParagraph>
+            </ReviewDetails>
           </ReviewCard>
         ))}
       </ReviewsGrid>

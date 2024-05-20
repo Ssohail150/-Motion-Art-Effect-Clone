@@ -4,11 +4,13 @@ import styled from 'styled-components';
 const SectionContainer = styled.section`
   padding: 40px 20px;
   background-color: transparent;
-  text-align: center;
+  text-align: left;
 `;
 
 const SectionHeading = styled.h2`
-  font-size: 32px;
+  align-items:center;
+  text-align: center;
+  font-size: 40px;
   margin-bottom: 40px;
   color: #EEE5FF;
 `;
@@ -16,7 +18,7 @@ const SectionHeading = styled.h2`
 const BoxesContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap; /* Enable wrapping on smaller screens */
 `;
 
@@ -28,14 +30,17 @@ const Box = styled.div`
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
+  max-width: 700px; /* Set a maximum width */
+  margin: 5px; /* Add margin for spacing */
 
   &:nth-child(1) {
-    margin-top: 20px; /* Left box offset */
-    margin-bottom: 50px;
+    margin-top: 50px; /* Left box offset */
+    margin-bottom: 150px;
   }
 
   &:nth-child(2) {
-    margin-top: 50px; /* Right box offset */
+    margin-bottom: 50px;
+    margin-top: 150px; /* Right box offset */
   }
 `;
 
@@ -60,10 +65,10 @@ const BoxImage = styled.img`
 const FeatureSection = () => {
   return (
     <SectionContainer>
-      <SectionHeading>Apply On Any Section Or Enable For Whole Page</SectionHeading>
+      <SectionHeading>Apply On Any Section Or Enable <br /> For Whole Page</SectionHeading>
       <BoxesContainer>
         <Box>
-          <BoxHeading>Apply On Any Section Or Enable For Whole Page</BoxHeading>
+          <BoxHeading>Apply On Section</BoxHeading>
           <BoxParagraph>Apply on section is a game-changer, offering an unparalleled way to manage applications directly from your website. </BoxParagraph>
           <BoxImage src="/assets/feature1.png" alt="Feature One Image" />
         </Box>

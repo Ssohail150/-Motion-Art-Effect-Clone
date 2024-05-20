@@ -7,6 +7,7 @@ import ReviewsSection from './components/ReviewsSection';
 import NewSection from './components/NewSection';
 import FeatureSection from './components/FeatureSection';  
 import Footer from './components/Footer';
+import RectangleBox from './components/RectangleBox';
 import NewFeatureSection from './components/NewFeatureSection';
 import CanvasBackground from './components/CanvasBackground'; // Import the parallax background
 
@@ -21,6 +22,7 @@ const App = () => {
       <ReviewsSection />
       <NewSection />
       <FeatureSection />
+      <RectangleBox/>
       <NewFeatureSection />
       <Footer />
     </>

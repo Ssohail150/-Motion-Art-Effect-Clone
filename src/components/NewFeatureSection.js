@@ -6,8 +6,10 @@ const SectionContainer = styled.section`
 `;
 
 const ContentContainer = styled.div`
+  align-items: center;
   text-align: center;
   margin-bottom: 40px;
+  
 `;
 
 const SectionHeading = styled.h2`
@@ -26,6 +28,8 @@ const BoxesContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; /* Enable wrapping on smaller screens */
+  max-width: 80%; /* Set a maximum width */
+  margin-left: 10%;
 `;
 
 const Box = styled.div`
@@ -34,8 +38,9 @@ const Box = styled.div`
   padding: 20px;
   background-color: transparent;
   background-image: linear-gradient(180deg, #0D061F 0%, #251E35 100%);
-  border-radius: 15px;
+  border-radius: 20px;
   border: 2px solid #6f6f6f;
+  
   `;
 
 const BoxImage = styled.img`
@@ -59,9 +64,9 @@ const NewFeatureSection = () => {
   return (
     <SectionContainer>
       <ContentContainer>
-        <SectionHeading>An All-Round Plugin With Powerful Features</SectionHeading>
+        <SectionHeading>An All-Round Plugin With <br/>Powerful Features</SectionHeading>
         <SectionParagraph>
-          Whether you're a seasoned web designer or just starting out, Motion Art for Elementor seamlessly integrates with the Elementor platform, providing you with a seamless and intuitive experience.
+          Whether you're a seasoned web designer or just starting out, Motion Art for <br/>Elementor seamlessly integrates with the Elementor platform, providing you <br/>with a seamless and intuitive experience.
         </SectionParagraph>
       </ContentContainer>
       <BoxesContainer>
